@@ -150,7 +150,7 @@ namespace NorthWestOrderSystem.Controllers
             //create form that calls the action methd with this information
             if (Username == "byucougar" && Password == "Gocougs")
             {
-                return View("LandingPage", null, db.Customers.Find(8));
+                return View("CustLandingPage", null, db.Customers.Find(8));
             }
             else
             {
