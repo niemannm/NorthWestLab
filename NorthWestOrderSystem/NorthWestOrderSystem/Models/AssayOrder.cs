@@ -14,10 +14,12 @@ namespace NorthWestOrderSystem.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int OrderID { get; set; }
 
+        [System.Web.Mvc.HiddenInput(DisplayValue = false)]
         [Display(Name = "Preliminary Charge")]
         [DataType(DataType.Currency)]
         public float PreliminaryCharge { get; set; }
 
+        [System.Web.Mvc.HiddenInput(DisplayValue = false)]
         [Display(Name = "Final Charge")]
         [DataType(DataType.Currency)]
         public float? FinalCharge { get; set; }
@@ -26,12 +28,15 @@ namespace NorthWestOrderSystem.Models
         [DataType(DataType.Date)]
         public DateTime DueDate { get; set; }
 
+        [System.Web.Mvc.HiddenInput(DisplayValue = false)]
         [Display(Name = "First Payment")]
         public bool FirstPayment { get; set; }
 
+        [System.Web.Mvc.HiddenInput(DisplayValue = false)]
         [Display(Name = "Second Payment")]
         public bool SecondPayment { get; set; }
 
+        [System.Web.Mvc.HiddenInput(DisplayValue = false)]
         [Display(Name = "Discount Percentage")]
         public float? DiscountPercentage { get; set; }
 
@@ -45,5 +50,9 @@ namespace NorthWestOrderSystem.Models
         //foreign key to Status
         public int? StatusID { get; set; }
         public virtual Status Status { get; set; }
+
+        public virtual AssayType AssayType { get; set; }
+
+        public virtual Compound Compound { get; set; }
     }
 }
