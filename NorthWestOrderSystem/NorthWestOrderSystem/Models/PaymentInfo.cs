@@ -21,7 +21,6 @@ namespace NorthWestOrderSystem.Models
         [Display(Name = "Card Number")]
         public int CardNumber { get; set; }
 
-        [DisplayFormat(DataFormatString = "{dd MMM yyyy}")]
         [Display(Name = "Expiration Date")]
         [DataType(DataType.Date)]
         public DateTime ExpirationDate { get; set; }

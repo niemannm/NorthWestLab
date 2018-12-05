@@ -20,12 +20,10 @@ namespace NorthWestOrderSystem.Models
         [Display(Name = "Compound Status")]
         public string CompoundStatus { get; set; }
 
-        [DisplayFormat(DataFormatString = "{dd MMM yyyy}")]
         [Display(Name = "Date Arrived")]
         [DataType(DataType.Date)]
         public DateTime DateArrived { get; set; }
 
-        [DisplayFormat(DataFormatString = "{dd MMM yyyy}")]
         [Display(Name = "Confirmation Date")]
         [DataType(DataType.Date)]
         public DateTime ConfirmationDateTime { get; set; }

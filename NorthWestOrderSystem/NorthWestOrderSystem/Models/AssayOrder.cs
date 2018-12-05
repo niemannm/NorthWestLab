@@ -22,7 +22,6 @@ namespace NorthWestOrderSystem.Models
         [DataType(DataType.Currency)]
         public float? FinalCharge { get; set; }
 
-        [DisplayFormat(DataFormatString = "{dd MMM yyyy}")]
         [Display(Name = "Due Date")]
         [DataType(DataType.Date)]
         public DateTime DueDate { get; set; }

@@ -17,7 +17,6 @@ namespace NorthWestOrderSystem.Models
         [Display(Name = "Estimated Days")]
         public int EstimatedDays { get; set; }
 
-        [DisplayFormat(DataFormatString = "{dd MMM yyyy}")]
         [Display(Name = "Scheduled Date")]
         [DataType(DataType.Date)]
         public DateTime ScheduledDate { get; set; }
