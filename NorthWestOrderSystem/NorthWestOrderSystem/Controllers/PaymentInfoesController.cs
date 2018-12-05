@@ -18,8 +18,7 @@ namespace NorthWestOrderSystem.Controllers
         // GET: PaymentInfoes
         public ActionResult Index()
         {
-            var paymentInfos = db.PaymentInfos.Include(p => p.Customer);
-            return View(paymentInfos.ToList());
+            return View(db.PaymentInfos.ToList());
         }
 
         // GET: PaymentInfoes/Details/5
@@ -40,7 +39,6 @@ namespace NorthWestOrderSystem.Controllers
         // GET: PaymentInfoes/Create
         public ActionResult Create()
         {
-            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "FirstName");
             return View();
         }
 
@@ -49,7 +47,7 @@ namespace NorthWestOrderSystem.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PaymentInfoID,CustomerID,CardNumber,ExpirationDate,CVV,CardHolder")] PaymentInfo paymentInfo)
+        public ActionResult Create([Bind(Include = "PaymentInfoID,CardNumber,ExpirationDate,CVV,CardHolder")] PaymentInfo paymentInfo)
         {
             if (ModelState.IsValid)
             {
@@ -58,7 +56,6 @@ namespace NorthWestOrderSystem.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "FirstName", paymentInfo.CustomerID);
             return View(paymentInfo);
         }
 
@@ -74,7 +71,6 @@ namespace NorthWestOrderSystem.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "FirstName", paymentInfo.CustomerID);
             return View(paymentInfo);
         }
 
@@ -83,7 +79,7 @@ namespace NorthWestOrderSystem.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PaymentInfoID,CustomerID,CardNumber,ExpirationDate,CVV,CardHolder")] PaymentInfo paymentInfo)
+        public ActionResult Edit([Bind(Include = "PaymentInfoID,CardNumber,ExpirationDate,CVV,CardHolder")] PaymentInfo paymentInfo)
         {
             if (ModelState.IsValid)
             {
@@ -91,7 +87,6 @@ namespace NorthWestOrderSystem.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "FirstName", paymentInfo.CustomerID);
             return View(paymentInfo);
         }
 

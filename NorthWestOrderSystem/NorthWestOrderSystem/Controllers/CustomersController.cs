@@ -9,7 +9,7 @@ using System.Web.Mvc;
 using NorthWestOrderSystem.DAL;
 using NorthWestOrderSystem.Models;
 
-namespace NorthWestOrderSystem
+namespace NorthWestOrderSystem.Controllers
 {
     public class CustomersController : Controller
     {
@@ -18,7 +18,8 @@ namespace NorthWestOrderSystem
         // GET: Customers
         public ActionResult Index()
         {
-            return View(db.Customers.ToList());
+            var customers = db.Customers.Include(c => c.PaymentInfo);
+            return View(customers.ToList());
         }
 
         // GET: Customers/Details/5
@@ -39,6 +40,7 @@ namespace NorthWestOrderSystem
         // GET: Customers/Create
         public ActionResult Create()
         {
+            ViewBag.PaymentInfoID = new SelectList(db.PaymentInfos, "PaymentInfoID", "CardHolder");
             return View();
         }
 
@@ -47,17 +49,16 @@ namespace NorthWestOrderSystem
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CustomerID,FirstName,LastName,StreetAddress,City,State,Zip,Email,Phone,PaymentInfoID")] Customer customer, PaymentInfo paymentInfo)
+        public ActionResult Create([Bind(Include = "CustomerID,FirstName,LastName,StreetAddress,City,State,Zip,Email,Phone,PaymentInfoID")] Customer customer)
         {
             if (ModelState.IsValid)
             {
                 db.Customers.Add(customer);
-                db.PaymentInfos.Add(paymentInfo);
-
                 db.SaveChanges();
-                return RedirectToAction("Index", new { CustomerID = customer.CustomerID, PaymentInfoesID = paymentInfo.PaymentInfoID});
+                return RedirectToAction("Index");
             }
 
+            ViewBag.PaymentInfoID = new SelectList(db.PaymentInfos, "PaymentInfoID", "CardHolder", customer.PaymentInfoID);
             return View(customer);
         }
 
@@ -73,6 +74,7 @@ namespace NorthWestOrderSystem
             {
                 return HttpNotFound();
             }
+            ViewBag.PaymentInfoID = new SelectList(db.PaymentInfos, "PaymentInfoID", "CardHolder", customer.PaymentInfoID);
             return View(customer);
         }
 
@@ -89,6 +91,7 @@ namespace NorthWestOrderSystem
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.PaymentInfoID = new SelectList(db.PaymentInfos, "PaymentInfoID", "CardHolder", customer.PaymentInfoID);
             return View(customer);
         }
 
