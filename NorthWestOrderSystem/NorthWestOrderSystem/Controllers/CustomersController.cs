@@ -51,9 +51,10 @@ namespace NorthWestOrderSystem
         {
             if (ModelState.IsValid)
             {
+                
                 db.Customers.Add(customer);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Create", "PaymentInfoes");
             }
 
             return View(customer);
@@ -111,6 +112,9 @@ namespace NorthWestOrderSystem
         public ActionResult DeleteConfirmed(int id)
         {
             Customer customer = db.Customers.Find(id);
+
+            db.Database.ExecuteSqlCommand("DELETE FROM PaymentInfo WHERE PaymentInfo.CustomerID = " + customer.CustomerID);
+
             db.Customers.Remove(customer);
             db.SaveChanges();
             return RedirectToAction("Index");
@@ -123,6 +127,26 @@ namespace NorthWestOrderSystem
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View("Login");
+        }
+
+        [HttpPost]
+        public ActionResult Login(String Username, String Password)
+        {
+            //create form that calls the action methd with this information
+            if (Username == "byucougar" && Password == "Gocougs")
+            {
+                return View("LandingPage", null, db.Customers.ToList());
+            }
+            else
+            {
+                return View("Login");
+            }
         }
     }
 }
