@@ -153,8 +153,14 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AssayOrdersController.cs" />
+    <Compile Include="Controllers\AssayTypesController.cs" />
+    <Compile Include="Controllers\CompoundsController.cs" />
+    <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\MaterialsController.cs" />
+    <Compile Include="Controllers\PaymentInfoesController.cs" />
     <Compile Include="DAL\IntexContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -222,6 +228,36 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Edit.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\AssayOrders\Create.cshtml" />
+    <Content Include="Views\AssayOrders\Delete.cshtml" />
+    <Content Include="Views\AssayOrders\Details.cshtml" />
+    <Content Include="Views\AssayOrders\Edit.cshtml" />
+    <Content Include="Views\AssayOrders\Index.cshtml" />
+    <Content Include="Views\Compounds\Create.cshtml" />
+    <Content Include="Views\Compounds\Delete.cshtml" />
+    <Content Include="Views\Compounds\Details.cshtml" />
+    <Content Include="Views\Compounds\Edit.cshtml" />
+    <Content Include="Views\Compounds\Index.cshtml" />
+    <Content Include="Views\AssayTypes\Create.cshtml" />
+    <Content Include="Views\AssayTypes\Delete.cshtml" />
+    <Content Include="Views\AssayTypes\Details.cshtml" />
+    <Content Include="Views\AssayTypes\Edit.cshtml" />
+    <Content Include="Views\AssayTypes\Index.cshtml" />
+    <Content Include="Views\Employees\Create.cshtml" />
+    <Content Include="Views\Employees\Delete.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
+    <Content Include="Views\Employees\Edit.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Materials\Create.cshtml" />
+    <Content Include="Views\Materials\Delete.cshtml" />
+    <Content Include="Views\Materials\Details.cshtml" />
+    <Content Include="Views\Materials\Edit.cshtml" />
+    <Content Include="Views\Materials\Index.cshtml" />
+    <Content Include="Views\PaymentInfoes\Create.cshtml" />
+    <Content Include="Views\PaymentInfoes\Delete.cshtml" />
+    <Content Include="Views\PaymentInfoes\Details.cshtml" />
+    <Content Include="Views\PaymentInfoes\Edit.cshtml" />
+    <Content Include="Views\PaymentInfoes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

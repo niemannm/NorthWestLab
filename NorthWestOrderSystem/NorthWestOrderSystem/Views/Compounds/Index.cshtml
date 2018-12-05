@@ -1,0 +1,81 @@
+﻿@model IEnumerable<NorthWestOrderSystem.Models.Compound>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompoundName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompoundStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateArrived)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConfirmationDateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MolecularMass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaximumToleratedDose)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompoundName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompoundStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateArrived)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConfirmationDateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Weight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MolecularMass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaximumToleratedDose)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.LTNumber }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LTNumber }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LTNumber })
+        </td>
+    </tr>
+}
+
+</table>
