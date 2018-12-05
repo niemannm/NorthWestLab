@@ -94,7 +94,8 @@ namespace NorthWestOrderSystem.Controllers
             {
                 db.Entry(customer).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+
+                return RedirectToAction("Login");
             }
             ViewBag.PaymentInfoID = new SelectList(db.PaymentInfos, "PaymentInfoID", "CardHolder", customer.PaymentInfoID);
             return View(customer);
