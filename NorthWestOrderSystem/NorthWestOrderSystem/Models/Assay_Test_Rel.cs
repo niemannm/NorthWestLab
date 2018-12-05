@@ -11,10 +11,12 @@ namespace NorthWestOrderSystem.Models
     public class Assay_Test_Rel
     {
         //Composite key to AssayOrder
+        [Key, Column(Order = 1)]
         public int? OrderID { get; set; }
         public virtual AssayOrder AssayOrder { get; set; }
 
         //Composite key to Test
+        [Key, Column(Order = 2)]
         public int? TestID { get; set; }
         public virtual Test Test { get; set; }
 

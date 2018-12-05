@@ -11,10 +11,12 @@ namespace NorthWestOrderSystem.Models
     public class Employee_Test_Rel
     {
         //foreign key to Test
+        [Key, Column(Order = 1)]
         public int? TestID { get; set; }
         public virtual Test Test { get; set; }
 
         //foreign key to Employee
+        [Key, Column(Order = 2)]
         public int? EmployeeID { get; set; }
         public virtual Employee Employee { get; set; }
 

@@ -24,7 +24,7 @@ namespace NorthWestOrderSystem.Models
 
         [Required(ErrorMessage = "Please put a Street Address")]
         [Display(Name = "Street Address")]
-        public string Address { get; set; }
+        public string StreetAddress { get; set; }
 
         [Required(ErrorMessage = "Please put a City")]
         [Display(Name = "City")]
@@ -44,13 +44,7 @@ namespace NorthWestOrderSystem.Models
         [Display(Name = "Email")]
         public string Email { get; set; }
 
-        [CompareAttribute("Email", ErrorMessage = "Emails do not Match")]
-        [EmailAddress(ErrorMessage = "Please put a valid Email")]
-        [Required(ErrorMessage = "Please put a Confirmation Email")]
-        [Display(Name = "Confirm Email")]
-        public string ConfirmEmail { get; set; }
-
-        [RegularExpression(@"^\+?\(?\d+\)? (\s|\-|\.)?\d{1,3}(\s|\-|\.)?\d{4}[\s]*[\d]*$", ErrorMessage = "Please put a valid phone number: (###) ###-####")]
+        [RegularExpression(@"^\+?\(?\d+\)?(\s|\-|\.)?\d{1,3}(\s|\-|\.)?\d{4}[\s]*[\d]*$", ErrorMessage = "Please put a valid phone number: (###) ###-####")]
         [Required(ErrorMessage = "Please put a Phone Number")]
         [Display(Name = "Phone Number")]
         public string Phone { get; set; }

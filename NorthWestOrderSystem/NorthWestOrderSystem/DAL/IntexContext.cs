@@ -11,7 +11,7 @@ namespace NorthWestOrderSystem.DAL
     {
         public IntexContext() : base("IntexContext")
         {
-            Database.Connection.ConnectionString = Database.Connection.ConnectionString.Replace("Blueberry1", "Password");
+            //Database.Connection.ConnectionString = Database.Connection.ConnectionString.Replace("Blueberry1", "Password");
             //Database.Connection.ConnectionString = @"TheConnectionStringYOU ARE USING";
         }
 
