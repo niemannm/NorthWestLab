@@ -47,14 +47,15 @@ namespace NorthWestOrderSystem
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CustomerID,FirstName,LastName,StreetAddress,City,State,Zip,Email,Phone")] Customer customer)
+        public ActionResult Create([Bind(Include = "CustomerID,FirstName,LastName,StreetAddress,City,State,Zip,Email,Phone,PaymentInfoID")] Customer customer, PaymentInfo paymentInfo)
         {
             if (ModelState.IsValid)
             {
-                
                 db.Customers.Add(customer);
+                db.PaymentInfos.Add(paymentInfo);
+
                 db.SaveChanges();
-                return RedirectToAction("Create", "PaymentInfoes");
+                return RedirectToAction("Index", new { CustomerID = customer.CustomerID, PaymentInfoesID = paymentInfo.PaymentInfoID});
             }
 
             return View(customer);
@@ -80,7 +81,7 @@ namespace NorthWestOrderSystem
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CustomerID,FirstName,LastName,StreetAddress,City,State,Zip,Email,Phone")] Customer customer)
+        public ActionResult Edit([Bind(Include = "CustomerID,FirstName,LastName,StreetAddress,City,State,Zip,Email,Phone,PaymentInfoID")] Customer customer)
         {
             if (ModelState.IsValid)
             {
@@ -113,7 +114,7 @@ namespace NorthWestOrderSystem
         {
             Customer customer = db.Customers.Find(id);
 
-            db.Database.ExecuteSqlCommand("DELETE FROM PaymentInfo WHERE PaymentInfo.CustomerID = " + customer.CustomerID);
+            db.Database.ExecuteSqlCommand("DELETE FROM PaymentInfo WHERE PaymentInfo.PaymentInfoID = " + customer.PaymentInfoID);
 
             db.Customers.Remove(customer);
             db.SaveChanges();

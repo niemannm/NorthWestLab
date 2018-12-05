@@ -48,5 +48,9 @@ namespace NorthWestOrderSystem.Models
         [Required(ErrorMessage = "Please put a Phone Number")]
         [Display(Name = "Phone Number")]
         public string Phone { get; set; }
+
+        //foreign key to PaymentInfo
+        public int? PaymentInfoID { get; set; }
+        public virtual PaymentInfo PaymentInfo { get; set; }
     }
 }

@@ -14,10 +14,6 @@ namespace NorthWestOrderSystem.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int PaymentInfoID { get; set; }
 
-        //foreign key to Customer
-        public int? CustomerID { get; set; }
-        public virtual Customer Customer { get; set; }
-
         [Display(Name = "Card Number")]
         public int CardNumber { get; set; }
 
@@ -28,7 +24,7 @@ namespace NorthWestOrderSystem.Models
         [Display(Name = "CVV")]
         public int CVV { get; set; }
 
-        [Display(Name = "Card Holder")]
+        [Display(Name = "Full Name on Card")]
         public string CardHolder { get; set; }
     }
 }
