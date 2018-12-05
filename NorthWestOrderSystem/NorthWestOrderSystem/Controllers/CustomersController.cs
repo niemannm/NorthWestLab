@@ -49,10 +49,15 @@ namespace NorthWestOrderSystem.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CustomerID,FirstName,LastName,StreetAddress,City,State,Zip,Email,Phone,PaymentInfoID")] Customer customer)
+        public ActionResult Create([Bind(Include = "CustomerID,FirstName,LastName,StreetAddress,City,State,Zip,Email,Phone,PaymentInfoID")] Customer customer, [Bind(Include = "PaymentInfoID,CardNumber,ExpirationDate,CVV,CardHolder")] PaymentInfo paymentInfo)
         {
             if (ModelState.IsValid)
             {
+                db.PaymentInfos.Add(paymentInfo);
+                db.SaveChanges();
+
+                customer.PaymentInfoID = paymentInfo.PaymentInfoID;
+
                 db.Customers.Add(customer);
                 db.SaveChanges();
                 return RedirectToAction("Index");
