@@ -202,8 +202,17 @@ namespace NorthWestOrderSystem.Controllers
 
         public ActionResult SignedUp()
         {
-
             return View("SignedUp");
+        }
+
+        public ActionResult SingleOrder()
+        {
+            return View("SingleOrder");
+        }
+
+        public ActionResult SingleOrder2()
+        {
+            return View("SingleOrder2");
         }
     }
 }
