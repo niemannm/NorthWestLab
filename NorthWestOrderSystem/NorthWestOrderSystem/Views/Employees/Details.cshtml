@@ -1,0 +1,58 @@
+﻿@model NorthWestOrderSystem.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Wage.WageID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wage.WageID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Office)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Office)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EmployeeID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

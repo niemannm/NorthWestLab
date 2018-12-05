@@ -153,10 +153,33 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AssayOrdersController.cs" />
+    <Compile Include="Controllers\AssayTypesController.cs" />
+    <Compile Include="Controllers\CompoundsController.cs" />
+    <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\MaterialsController.cs" />
+    <Compile Include="Controllers\PaymentInfoesController.cs" />
+    <Compile Include="DAL\IntexContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AssayOrder.cs" />
+    <Compile Include="Models\AssayType.cs" />
+    <Compile Include="Models\Assay_Material_Rel.cs" />
+    <Compile Include="Models\Assay_Test_Rel.cs" />
+    <Compile Include="Models\Compound.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Employee_Test_Rel.cs" />
+    <Compile Include="Models\Material.cs" />
+    <Compile Include="Models\PaymentInfo.cs" />
+    <Compile Include="Models\Sample.cs" />
+    <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\Test.cs" />
+    <Compile Include="Models\Test_Sample_Rel.cs" />
+    <Compile Include="Models\Wage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -184,7 +207,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -198,10 +223,44 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Customers\Create.cshtml" />
+    <Content Include="Views\Customers\Delete.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\Edit.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\AssayOrders\Create.cshtml" />
+    <Content Include="Views\AssayOrders\Delete.cshtml" />
+    <Content Include="Views\AssayOrders\Details.cshtml" />
+    <Content Include="Views\AssayOrders\Edit.cshtml" />
+    <Content Include="Views\AssayOrders\Index.cshtml" />
+    <Content Include="Views\Compounds\Create.cshtml" />
+    <Content Include="Views\Compounds\Delete.cshtml" />
+    <Content Include="Views\Compounds\Details.cshtml" />
+    <Content Include="Views\Compounds\Edit.cshtml" />
+    <Content Include="Views\Compounds\Index.cshtml" />
+    <Content Include="Views\AssayTypes\Create.cshtml" />
+    <Content Include="Views\AssayTypes\Delete.cshtml" />
+    <Content Include="Views\AssayTypes\Details.cshtml" />
+    <Content Include="Views\AssayTypes\Edit.cshtml" />
+    <Content Include="Views\AssayTypes\Index.cshtml" />
+    <Content Include="Views\Employees\Create.cshtml" />
+    <Content Include="Views\Employees\Delete.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
+    <Content Include="Views\Employees\Edit.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Materials\Create.cshtml" />
+    <Content Include="Views\Materials\Delete.cshtml" />
+    <Content Include="Views\Materials\Details.cshtml" />
+    <Content Include="Views\Materials\Edit.cshtml" />
+    <Content Include="Views\Materials\Index.cshtml" />
+    <Content Include="Views\PaymentInfoes\Create.cshtml" />
+    <Content Include="Views\PaymentInfoes\Delete.cshtml" />
+    <Content Include="Views\PaymentInfoes\Details.cshtml" />
+    <Content Include="Views\PaymentInfoes\Edit.cshtml" />
+    <Content Include="Views\PaymentInfoes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
