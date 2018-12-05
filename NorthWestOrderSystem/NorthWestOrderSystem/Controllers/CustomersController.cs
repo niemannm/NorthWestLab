@@ -141,7 +141,7 @@ namespace NorthWestOrderSystem
             //create form that calls the action methd with this information
             if (Username == "byucougar" && Password == "Gocougs")
             {
-                return View("LandingPage", null, db.Customers.ToList());
+                return View("LandingPage", null, db.Customers.Find(8));
             }
             else
             {
