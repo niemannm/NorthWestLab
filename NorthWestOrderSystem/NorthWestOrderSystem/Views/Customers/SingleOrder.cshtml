@@ -1,0 +1,90 @@
+﻿@model NorthWestOrderSystem.Models.AssayOrder
+
+@{
+    ViewBag.Title = "SingleOrder";
+}
+
+<h2>Status for Order #19320</h2>
+
+<div>
+    <h4>Details:</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status.StatusDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status.StatusDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreliminaryCharge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreliminaryCharge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FinalCharge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FinalCharge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DueDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DueDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstPayment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstPayment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondPayment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondPayment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiscountPercentage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiscountPercentage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OrderID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
