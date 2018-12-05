@@ -43,5 +43,9 @@ namespace NorthWestOrderSystem.Models
         //foreign key to Employee
         public int? EmployeeID { get; set; }
         public virtual Employee Employee { get; set; }
+
+        //foreign key to Employee
+        public int? CustomerID { get; set; }
+        public virtual Customer Customer { get; set; }
     }
 }

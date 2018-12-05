@@ -184,10 +184,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\40%25.png" />
+    <Content Include="Content\90%25.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\EmptyTestTube.svg" />
     <Content Include="Content\laboratory.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -230,11 +233,6 @@
     <Content Include="Views\AssayOrders\Details.cshtml" />
     <Content Include="Views\AssayOrders\Edit.cshtml" />
     <Content Include="Views\AssayOrders\Index.cshtml" />
-    <Content Include="Views\Compounds\Create.cshtml" />
-    <Content Include="Views\Compounds\Delete.cshtml" />
-    <Content Include="Views\Compounds\Details.cshtml" />
-    <Content Include="Views\Compounds\Edit.cshtml" />
-    <Content Include="Views\Compounds\Index.cshtml" />
     <Content Include="Views\AssayTypes\Create.cshtml" />
     <Content Include="Views\AssayTypes\Delete.cshtml" />
     <Content Include="Views\AssayTypes\Details.cshtml" />
@@ -267,11 +265,20 @@
     <Content Include="Views\Customers\SingleOrder.cshtml" />
     <Content Include="Views\Customers\SignUp.cshtml" />
     <Content Include="Views\Customers\SignedUp.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Tests\Create.cshtml" />
     <Content Include="Views\Tests\Delete.cshtml" />
     <Content Include="Views\Tests\Details.cshtml" />
     <Content Include="Views\Tests\Edit.cshtml" />
     <Content Include="Views\Tests\Index.cshtml" />
+=======
+    <Content Include="Views\Compounds\Create.cshtml" />
+    <Content Include="Views\Compounds\Delete.cshtml" />
+    <Content Include="Views\Compounds\Details.cshtml" />
+    <Content Include="Views\Compounds\Edit.cshtml" />
+    <Content Include="Views\Compounds\Index.cshtml" />
+    <Content Include="Views\Customers\SingleOrder2.cshtml" />
+>>>>>>> de1f4c114efa8dd4700dafad0e9be64800e8b0b4
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

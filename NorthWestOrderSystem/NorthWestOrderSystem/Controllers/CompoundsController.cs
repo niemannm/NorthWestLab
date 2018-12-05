@@ -18,7 +18,7 @@ namespace NorthWestOrderSystem.Controllers
         // GET: Compounds
         public ActionResult Index()
         {
-            var compounds = db.Compounds.Include(c => c.Employee);
+            var compounds = db.Compounds.Include(c => c.Customer).Include(c => c.Employee);
             return View(compounds.ToList());
         }
 
@@ -40,6 +40,7 @@ namespace NorthWestOrderSystem.Controllers
         // GET: Compounds/Create
         public ActionResult Create()
         {
+            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "FirstName");
             ViewBag.EmployeeID = new SelectList(db.Employees, "EmployeeID", "FirstName");
             return View();
         }
@@ -49,7 +50,7 @@ namespace NorthWestOrderSystem.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "LTNumber,CompoundName,CompoundStatus,DateArrived,ConfirmationDateTime,Weight,MolecularMass,MaximumToleratedDose,Quantity,EmployeeID")] Compound compound)
+        public ActionResult Create([Bind(Include = "LTNumber,CompoundName,CompoundStatus,DateArrived,ConfirmationDateTime,Weight,MolecularMass,MaximumToleratedDose,Quantity,EmployeeID,CustomerID")] Compound compound)
         {
             if (ModelState.IsValid)
             {
@@ -58,6 +59,7 @@ namespace NorthWestOrderSystem.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "FirstName", compound.CustomerID);
             ViewBag.EmployeeID = new SelectList(db.Employees, "EmployeeID", "FirstName", compound.EmployeeID);
             return View(compound);
         }
@@ -74,6 +76,7 @@ namespace NorthWestOrderSystem.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "FirstName", compound.CustomerID);
             ViewBag.EmployeeID = new SelectList(db.Employees, "EmployeeID", "FirstName", compound.EmployeeID);
             return View(compound);
         }
@@ -83,7 +86,7 @@ namespace NorthWestOrderSystem.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "LTNumber,CompoundName,CompoundStatus,DateArrived,ConfirmationDateTime,Weight,MolecularMass,MaximumToleratedDose,Quantity,EmployeeID")] Compound compound)
+        public ActionResult Edit([Bind(Include = "LTNumber,CompoundName,CompoundStatus,DateArrived,ConfirmationDateTime,Weight,MolecularMass,MaximumToleratedDose,Quantity,EmployeeID,CustomerID")] Compound compound)
         {
             if (ModelState.IsValid)
             {
@@ -91,6 +94,7 @@ namespace NorthWestOrderSystem.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "FirstName", compound.CustomerID);
             ViewBag.EmployeeID = new SelectList(db.Employees, "EmployeeID", "FirstName", compound.EmployeeID);
             return View(compound);
         }

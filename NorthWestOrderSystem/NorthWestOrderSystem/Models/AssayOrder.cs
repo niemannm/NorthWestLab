@@ -49,10 +49,10 @@ namespace NorthWestOrderSystem.Models
         public int? StatusID { get; set; }
         public virtual Status Status { get; set; }
 
-        public int? AssayTypeID { get; set; }
-        public virtual AssayType AssayType { get; set; }
+        //public int? AssayTypeID { get; set; }
+        //public virtual AssayType AssayType { get; set; }
 
-        public int? LTNumber { get; set; }
-        public virtual Compound Compound { get; set; }
+        //public int? LTNumber { get; set; }
+        //public virtual Compound Compound { get; set; }
     }
 }
