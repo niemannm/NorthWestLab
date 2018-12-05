@@ -9,7 +9,7 @@
     <a>@Html.ActionLink("View Your Orders", "Index")</a>
 </div>
 <div class="main">
-    <h2 style="font-size:24px">Welcome to Northwest Labs @Html.DisplayFor(model => model.FirstName)!</h2>
+    <h2 style="font-size:24px">Welcome to Northwest Labs, @Html.DisplayFor(model => model.FirstName)!</h2>
 
     <div>
         <hr />
@@ -84,6 +84,6 @@
     </div>
     <hr />
         <a>@Html.ActionLink("Edit Your Information", "Edit", new { id = Model.CustomerID })</a> |
-        <a>@Html.ActionLink("Logout", "Index","Home",null,null)</a>
+        <a>@Html.ActionLink("Logout", "Login","Customers",null,null)</a>
 </div>
 
