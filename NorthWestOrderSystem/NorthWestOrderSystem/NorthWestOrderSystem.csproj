@@ -261,6 +261,8 @@
     <Content Include="Views\PaymentInfoes\Edit.cshtml" />
     <Content Include="Views\PaymentInfoes\Index.cshtml" />
     <Content Include="Views\Customers\CustLandingPage.cshtml" />
+    <Content Include="Views\Customers\OrderAssay.cshtml" />
+    <Content Include="Views\Customers\ThankYou.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

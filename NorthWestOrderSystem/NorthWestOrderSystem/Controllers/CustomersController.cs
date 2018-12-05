@@ -157,5 +157,16 @@ namespace NorthWestOrderSystem.Controllers
                 return View("Login");
             }
         }
+
+        public ActionResult OrderAssay()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult OrderAssay(DateTime DueDate, String CompoundName, String AssayType, String Comments)
+        {
+            return View("ThankYou");
+        }
     }
 }
