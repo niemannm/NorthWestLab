@@ -161,6 +161,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MaterialsController.cs" />
     <Compile Include="Controllers\PaymentInfoesController.cs" />
+    <Compile Include="Controllers\TestsController.cs" />
     <Compile Include="DAL\IntexContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -266,6 +267,11 @@
     <Content Include="Views\Customers\SingleOrder.cshtml" />
     <Content Include="Views\Customers\SignUp.cshtml" />
     <Content Include="Views\Customers\SignedUp.cshtml" />
+    <Content Include="Views\Tests\Create.cshtml" />
+    <Content Include="Views\Tests\Delete.cshtml" />
+    <Content Include="Views\Tests\Details.cshtml" />
+    <Content Include="Views\Tests\Edit.cshtml" />
+    <Content Include="Views\Tests\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

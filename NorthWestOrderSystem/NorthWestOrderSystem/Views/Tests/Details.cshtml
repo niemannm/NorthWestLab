@@ -1,0 +1,66 @@
+﻿@model NorthWestOrderSystem.Models.Test
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Test</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AssayType.AssayTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssayType.AssayTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstimatedDays)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstimatedDays)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ScheduledDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ScheduledDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Concentration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Concentration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActualCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActualCost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TestID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

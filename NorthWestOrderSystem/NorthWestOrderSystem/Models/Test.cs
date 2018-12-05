@@ -29,7 +29,7 @@ namespace NorthWestOrderSystem.Models
 
         [Display(Name = "Actual Cost")]
         [DataType(DataType.Currency)]
-        public float ActualCost { get; set; }
+        public double ActualCost { get; set; }
 
         //foreign key to Assay
         public int? AssayID { get; set; }
