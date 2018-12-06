@@ -310,6 +310,7 @@
     <Content Include="Views\Employees\BarCodes.cshtml" />
     <Content Include="Views\AssayTypes\Catalog.cshtml" />
     <Content Include="Views\AssayTypes\BiochemicalPharmocology.cshtml" />
+    <Content Include="Views\Home\EmailConfirmation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
