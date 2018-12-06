@@ -86,15 +86,63 @@
                     </dd>
 
                 </dl>
+                <hr />
+                <dl>
+                    <dt>
+                        Tests Completed
+                    </dt>
+
+                    <dd>
+                        2
+                    </dd>
+
+                    <dt>
+                        Total Tests
+                    </dt>
+
+                    <dd>
+                        5
+                    </dd>
+
+                    <dt>
+                        Results for Test 1
+                    </dt>
+
+                    <dd>
+                        We found that...
+                    </dd>
+
+                    <dt>
+                        Results for Test 2
+                    </dt>
+
+                    <dd>
+                        We found that...
+                    </dd>
+
+                    <dt>
+                        Remaining Actions
+                    </dt>
+
+                    <dd>
+                        We still need to...
+                    </dd>
+                </dl>
             </div>
             <div class="col-md-4">
-                <img src="~/Content/Images/40test.png" style="width:100px; height:auto;" alt="why" />
+                <img src="~/Content/Images/40test.png" style="width:100px; height:auto;" />
+                <br />
+                <p>View Detailed Test Results</p>
+                @Html.ActionLink("Test Results", "SingleOrder2", "Customers", null, null)
+                <br />
+                <br />
+                <div>
+                    @Html.ActionLink("Update", "SingleOrder2")
+                </div>
             </div>
 
         </div>
-        <div>
-            @Html.ActionLink("Update", "SingleOrder2")
-        </div>
+        
     </div>
 </div>
     
