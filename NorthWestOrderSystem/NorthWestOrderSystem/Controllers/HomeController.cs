@@ -2,6 +2,8 @@
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Net.Mail;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using NorthWestOrderSystem.DAL;
@@ -28,6 +30,29 @@ namespace NorthWestOrderSystem.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        //POST
+        [HttpPost]
+        public async Task<ActionResult> Contact(string name, string email, string subject, string message)
+        {
+            ViewBag.myBag = "<h2>Thank you " + name + ".<br>We will send an email to " + email + "</h2>";
+            using (MailMessage mail = new MailMessage())
+            {
+                mail.From = new MailAddress("emailforextracredit@gmail.com");
+                mail.To.Add(email);
+                mail.Subject = subject;
+                mail.Body = "<h2>" + message + "</h2>";
+                mail.IsBodyHtml = true;
+
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                {
+                    smtp.Credentials = new NetworkCredential("emailforextracredit@gmail.com", "extracredit1");
+                    smtp.EnableSsl = true;
+                    await smtp.SendMailAsync(mail);
+                }
+            }
+            return View("EmailConfirmation");  
         }
     }
 }
