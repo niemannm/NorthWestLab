@@ -168,8 +168,8 @@
     </Compile>
     <Compile Include="Models\AssayOrder.cs" />
     <Compile Include="Models\AssayType.cs" />
-    <Compile Include="Models\Assay_Material_Rel.cs" />
-    <Compile Include="Models\Assay_Test_Rel.cs" />
+    <Compile Include="Models\TestType_Material_Rel.cs" />
+    <Compile Include="Models\AssayType_TestType_Rel.cs" />
     <Compile Include="Models\Compound.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
