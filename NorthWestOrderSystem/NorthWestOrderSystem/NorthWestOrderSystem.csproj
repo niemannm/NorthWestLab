@@ -184,14 +184,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\40%25.png" />
-    <Content Include="Content\90%25.png" />
+    <Content Include="Content\40test.png" />
+    <Content Include="Content\90test.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\colorlogo.png" />
     <Content Include="Content\EmptyTestTube.svg" />
     <Content Include="Content\laboratory.jpg" />
+    <Content Include="Content\logo.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
