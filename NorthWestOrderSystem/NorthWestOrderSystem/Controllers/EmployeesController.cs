@@ -129,5 +129,15 @@ namespace NorthWestOrderSystem.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult EmpLandingPage()
+        {
+            return View("EmpLandingPage", db.Employees.Find(1));
+        }
+
+        public ActionResult WeeklySchedule()
+        {
+            return View("WeeklySchedule");
+        }
     }
 }

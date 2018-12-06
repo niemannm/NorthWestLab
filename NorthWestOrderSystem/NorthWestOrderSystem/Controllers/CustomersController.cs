@@ -149,9 +149,14 @@ namespace NorthWestOrderSystem.Controllers
         public ActionResult Login(String Username, String Password)
         {
             //create form that calls the action methd with this information
-            if (Username == "byucougar" && Password == "Gocougs")
+            if (Username == "customer" && Password == "password")
             {
                 return View("CustLandingPage", null, db.Customers.Find(31));
+            }
+            else if (Username == "employee" && Password == "password")
+            {
+                //return View("EmpLandingPage", null, db.Employees.Find(1));
+                return RedirectToAction("EmpLandingPage", "Employees", null);
             }
             else
             {
@@ -212,7 +217,7 @@ namespace NorthWestOrderSystem.Controllers
 
         public ActionResult SingleOrder2()
         {
-            return View("SingleOrder2");
+            return View("SingleOrder2", db.AssayOrders.Find(3));
         }
     }
 }

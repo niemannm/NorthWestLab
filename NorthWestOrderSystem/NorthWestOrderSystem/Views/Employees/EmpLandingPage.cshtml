@@ -1,0 +1,68 @@
+﻿@model NorthWestOrderSystem.Models.Employee
+
+@{
+    ViewBag.Title = "Your Portal";
+}
+
+<div class="sidenav">
+    <a>@Html.ActionLink("New Test", "Create", "Tests", null, null)</a>
+    <a>@Html.ActionLink("View Active Tests", "Index", "Tests", null, null)</a>
+    <a>@Html.ActionLink("View Weekly Schedule", "WeeklySchedule", "Employees", null, null)</a>
+    <a>@Html.ActionLink("Receive New Compound", "ViewOrders", "AssayOrders", null, null)</a>
+    <a>@Html.ActionLink("Generate Sample Label", "ViewOrders", "AssayOrders", null, null)</a>
+</div>
+<div class="main">
+    <h2 style="font-size:24px">Welcome to Northwest Labs, @Html.DisplayFor(model => model.FirstName)!</h2>
+
+    <div>
+        <hr />
+        <p><b>Your Information:</b></p>
+        <br />
+        <dl class="dl-horizontal">
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FirstName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EmployeeType)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EmployeeType)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Office)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Office)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Wage)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Wage.WageAmount)
+            </dd>
+        </dl>
+    </div>
+    <hr />
+        <a>@Html.ActionLink("Edit Your Information", "Edit", new { id = Model.EmployeeID })</a> |
+        <a>@Html.ActionLink("Logout", "Login","Customers",null,null)</a>
+</div>
+
