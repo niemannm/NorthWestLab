@@ -63,7 +63,7 @@ a:hover {
 .jumbotron {
     background-image:url("Images/chemistFade.png");
     background-repeat: no-repeat;
-    background-size:contain
+    background-size: contain;
 }
 
 @media screen and (max-height: 450px) {

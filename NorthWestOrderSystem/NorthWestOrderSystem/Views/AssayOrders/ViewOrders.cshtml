@@ -1,14 +1,16 @@
 ﻿@model IEnumerable<NorthWestOrderSystem.Models.AssayOrder>
 
 @{
-    ViewBag.Title = "ViewOrders";
+    ViewBag.Title = "View Orders";
 }
 
-<h2>ViewOrders</h2>
+<h1 style="font-size:30px">Your Orders:</h1>
+<hr />
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Add New Order", "Create", "AssayOrders", null, null)
 </p>
+<br />
 <table class="table">
     <tr>
         <th>
