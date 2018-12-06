@@ -11,112 +11,107 @@ using NorthWestOrderSystem.Models;
 
 namespace NorthWestOrderSystem.Controllers
 {
-    public class TestsController : Controller
+    public class TestTypesController : Controller
     {
         private IntexContext db = new IntexContext();
 
-        // GET: Tests
+        // GET: TestTypes
         public ActionResult Index()
         {
-            var tests = db.Tests.Include(t => t.TestType);
-            return View(tests.ToList());
+            return View(db.TestTypes.ToList());
         }
 
-        // GET: Tests/Details/5
+        // GET: TestTypes/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Test test = db.Tests.Find(id);
-            if (test == null)
+            TestType testType = db.TestTypes.Find(id);
+            if (testType == null)
             {
                 return HttpNotFound();
             }
-            return View(test);
+            return View(testType);
         }
 
-        // GET: Tests/Create
+        // GET: TestTypes/Create
         public ActionResult Create()
         {
-            ViewBag.TestTypeID = new SelectList(db.TestTypes, "TestTypeID", "Description");
             return View();
         }
 
-        // POST: Tests/Create
+        // POST: TestTypes/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "TestID,EstimatedDays,ScheduledDate,CompletionDate,Concentration,ActualCost,TestTypeID")] Test test)
+        public ActionResult Create([Bind(Include = "TestTypeID,Description,Procedures,EstimatedDuration,EstimatedCost")] TestType testType)
         {
             if (ModelState.IsValid)
             {
-                db.Tests.Add(test);
+                db.TestTypes.Add(testType);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.TestTypeID = new SelectList(db.TestTypes, "TestTypeID", "Description", test.TestTypeID);
-            return View(test);
+            return View(testType);
         }
 
-        // GET: Tests/Edit/5
+        // GET: TestTypes/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Test test = db.Tests.Find(id);
-            if (test == null)
+            TestType testType = db.TestTypes.Find(id);
+            if (testType == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.TestTypeID = new SelectList(db.TestTypes, "TestTypeID", "Description", test.TestTypeID);
-            return View(test);
+            return View(testType);
         }
 
-        // POST: Tests/Edit/5
+        // POST: TestTypes/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "TestID,EstimatedDays,ScheduledDate,CompletionDate,Concentration,ActualCost,TestTypeID")] Test test)
+        public ActionResult Edit([Bind(Include = "TestTypeID,Description,Procedures,EstimatedDuration,EstimatedCost")] TestType testType)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(test).State = EntityState.Modified;
+                db.Entry(testType).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.TestTypeID = new SelectList(db.TestTypes, "TestTypeID", "Description", test.TestTypeID);
-            return View(test);
+            return View(testType);
         }
 
-        // GET: Tests/Delete/5
+        // GET: TestTypes/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Test test = db.Tests.Find(id);
-            if (test == null)
+            TestType testType = db.TestTypes.Find(id);
+            if (testType == null)
             {
                 return HttpNotFound();
             }
-            return View(test);
+            return View(testType);
         }
 
-        // POST: Tests/Delete/5
+        // POST: TestTypes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Test test = db.Tests.Find(id);
-            db.Tests.Remove(test);
+            TestType testType = db.TestTypes.Find(id);
+            db.TestTypes.Remove(testType);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

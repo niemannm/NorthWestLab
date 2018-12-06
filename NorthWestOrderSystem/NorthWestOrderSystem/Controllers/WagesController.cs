@@ -11,112 +11,107 @@ using NorthWestOrderSystem.Models;
 
 namespace NorthWestOrderSystem.Controllers
 {
-    public class TestsController : Controller
+    public class WagesController : Controller
     {
         private IntexContext db = new IntexContext();
 
-        // GET: Tests
+        // GET: Wages
         public ActionResult Index()
         {
-            var tests = db.Tests.Include(t => t.TestType);
-            return View(tests.ToList());
+            return View(db.Wages.ToList());
         }
 
-        // GET: Tests/Details/5
+        // GET: Wages/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Test test = db.Tests.Find(id);
-            if (test == null)
+            Wage wage = db.Wages.Find(id);
+            if (wage == null)
             {
                 return HttpNotFound();
             }
-            return View(test);
+            return View(wage);
         }
 
-        // GET: Tests/Create
+        // GET: Wages/Create
         public ActionResult Create()
         {
-            ViewBag.TestTypeID = new SelectList(db.TestTypes, "TestTypeID", "Description");
             return View();
         }
 
-        // POST: Tests/Create
+        // POST: Wages/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "TestID,EstimatedDays,ScheduledDate,CompletionDate,Concentration,ActualCost,TestTypeID")] Test test)
+        public ActionResult Create([Bind(Include = "WageID,WageAmount")] Wage wage)
         {
             if (ModelState.IsValid)
             {
-                db.Tests.Add(test);
+                db.Wages.Add(wage);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.TestTypeID = new SelectList(db.TestTypes, "TestTypeID", "Description", test.TestTypeID);
-            return View(test);
+            return View(wage);
         }
 
-        // GET: Tests/Edit/5
+        // GET: Wages/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Test test = db.Tests.Find(id);
-            if (test == null)
+            Wage wage = db.Wages.Find(id);
+            if (wage == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.TestTypeID = new SelectList(db.TestTypes, "TestTypeID", "Description", test.TestTypeID);
-            return View(test);
+            return View(wage);
         }
 
-        // POST: Tests/Edit/5
+        // POST: Wages/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "TestID,EstimatedDays,ScheduledDate,CompletionDate,Concentration,ActualCost,TestTypeID")] Test test)
+        public ActionResult Edit([Bind(Include = "WageID,WageAmount")] Wage wage)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(test).State = EntityState.Modified;
+                db.Entry(wage).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.TestTypeID = new SelectList(db.TestTypes, "TestTypeID", "Description", test.TestTypeID);
-            return View(test);
+            return View(wage);
         }
 
-        // GET: Tests/Delete/5
+        // GET: Wages/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Test test = db.Tests.Find(id);
-            if (test == null)
+            Wage wage = db.Wages.Find(id);
+            if (wage == null)
             {
                 return HttpNotFound();
             }
-            return View(test);
+            return View(wage);
         }
 
-        // POST: Tests/Delete/5
+        // POST: Wages/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Test test = db.Tests.Find(id);
-            db.Tests.Remove(test);
+            Wage wage = db.Wages.Find(id);
+            db.Wages.Remove(wage);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
