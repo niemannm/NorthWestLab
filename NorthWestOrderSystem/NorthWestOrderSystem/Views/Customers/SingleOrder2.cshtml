@@ -84,11 +84,80 @@
                     <dd>
                         @Html.DisplayFor(model => model.Comments)
                     </dd>
+                </dl>
+                <hr />
+                <dl>
+                    <dt>
+                        Tests Completed
+                    </dt>
 
+                    <dd>
+                        5
+                    </dd>
+
+                    <dt>
+                        Total Tests
+                    </dt>
+
+                    <dd>
+                        5
+                    </dd>
+
+                    <dt>
+                        Results for Test 1
+                    </dt>
+
+                    <dd>
+                        We found that...
+                    </dd>
+
+                    <dt>
+                        Results for Test 2
+                    </dt>
+
+                    <dd>
+                        We found that...
+                    </dd>
+
+                    <dt>
+                        Results for Test 3
+                    </dt>
+
+                    <dd>
+                        We found that...
+                    </dd>
+
+                    <dt>
+                        Results for Test 4
+                    </dt>
+
+                    <dd>
+                        We found that...
+                    </dd>
+
+                    <dt>
+                        Results for Test 5
+                    </dt>
+
+                    <dd>
+                        We found that...
+                    </dd>
+
+                    <dt>
+                        Remaining Actions
+                    </dt>
+
+                    <dd>
+                        None. All Tests Completed.
+                    </dd>
                 </dl>
             </div>
             <div class="col-md-4">
                 <img src="~/Content/Images/90test.png" style="width:100px; height:auto;" />
+                <br />
+                <p>View Detailed Test Results</p>
+                @Html.ActionLink("Test Results", "SingleOrder2", "Customers", null, null)
+                <br />
             </div>
 
         </div>
