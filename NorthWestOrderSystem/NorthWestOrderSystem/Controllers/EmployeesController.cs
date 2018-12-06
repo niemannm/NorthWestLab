@@ -139,5 +139,17 @@ namespace NorthWestOrderSystem.Controllers
         {
             return View("WeeklySchedule");
         }
+
+        public ActionResult AssayTypesList()
+        {
+            return RedirectToAction("AssayTypesList", "AssayTypes", null);
+        }
+
+        // GET: AssayTypeList
+        public ActionResult NewTest()
+        {
+            return RedirectToAction("Create", "Tests", null);
+        }
+
     }
 }

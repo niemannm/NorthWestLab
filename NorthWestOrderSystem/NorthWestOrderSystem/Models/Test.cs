@@ -30,7 +30,7 @@ namespace NorthWestOrderSystem.Models
 
         [Display(Name = "Actual Cost")]
         [DataType(DataType.Currency)]
-        public double ActualCost { get; set; }
+        public int ActualCost { get; set; }
 
         //foreign key to TestType
         public int? TestTypeID { get; set; }

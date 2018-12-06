@@ -199,7 +199,7 @@
     <Content Include="Content\EmptyTestTube.svg" />
     <Content Include="Content\laboratory.jpg" />
     <Content Include="Content\logo.png" />
-    <Content Include="Content\weeklyschedule.jpg" />
+    <Content Include="Content\weeklyschedule.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -297,6 +297,7 @@
     <Content Include="Views\AssayOrders\ViewOrders.cshtml" />
     <Content Include="Views\Employees\EmpLandingPage.cshtml" />
     <Content Include="Views\Employees\WeeklySchedule.cshtml" />
+    <Content Include="Views\AssayTypes\AssayTypesList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

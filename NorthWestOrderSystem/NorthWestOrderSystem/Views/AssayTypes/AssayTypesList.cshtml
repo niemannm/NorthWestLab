@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Select Assay Type";
+}
+
+<h2>Please Select an Assay Type</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-horizontal">
+        <h4>AssayOrder</h4>
+        <hr />
+        <div class="form-group">
+            <select>
+                <option>Biochemical Pharmacology (BP)</option>
+                <option>DiscoveryScreen® (DS)</option>
+                <option>ImmunoScreen® (IS)</option>
+                <option>ProfilingScreen® (PF)</option>
+                <option>PharmaScreen® (PS)</option>
+                <option>CustomScreen™ (CS)</option>
+                <option>Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <a>@Html.ActionLink("Continue", "NewTest", "Employees", null, null)</a>
+            </div>
+        </div>
+    </div>
+}

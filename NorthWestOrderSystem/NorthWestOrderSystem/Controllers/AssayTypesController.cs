@@ -124,5 +124,10 @@ namespace NorthWestOrderSystem.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult AssayTypesList()
+        {
+            return View("AssayTypesList");
+        }
     }
 }
