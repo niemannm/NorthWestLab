@@ -16,6 +16,6 @@ namespace NorthWestOrderSystem.Models
 
         [Display(Name = "Wage Amount")]
         [DataType(DataType.Currency)]
-        public float WageAmount { get; set; }
+        public int WageAmount { get; set; }
     }
 }

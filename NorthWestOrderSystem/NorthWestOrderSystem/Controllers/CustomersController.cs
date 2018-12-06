@@ -123,8 +123,8 @@ namespace NorthWestOrderSystem.Controllers
         {
             Customer customer = db.Customers.Find(id);
 
-            db.Database.ExecuteSqlCommand("DELETE FROM PaymentInfo WHERE PaymentInfo.PaymentInfoID = " + customer.PaymentInfoID);
-
+            //db.Database.ExecuteSqlCommand("DELETE FROM PaymentInfo WHERE PaymentInfo.PaymentInfoID = " + customer.PaymentInfoID);
+            db.Database.ExecuteSqlCommand("DELETE FROM AssayOrder WHERE AssayOrder.CustomerID = " + customer.CustomerID);
             db.Customers.Remove(customer);
             db.SaveChanges();
             return RedirectToAction("Index");
@@ -151,7 +151,7 @@ namespace NorthWestOrderSystem.Controllers
             //create form that calls the action methd with this information
             if (Username == "byucougar" && Password == "Gocougs")
             {
-                return View("CustLandingPage", null, db.Customers.Find(8));
+                return View("CustLandingPage", null, db.Customers.Find(31));
             }
             else
             {
