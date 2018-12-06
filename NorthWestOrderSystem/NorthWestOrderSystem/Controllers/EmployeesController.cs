@@ -151,5 +151,10 @@ namespace NorthWestOrderSystem.Controllers
             return RedirectToAction("Create", "Tests", null);
         }
 
+        public ActionResult BarCodes()
+        {
+            return View("BarCodes");
+        }
+
     }
 }
