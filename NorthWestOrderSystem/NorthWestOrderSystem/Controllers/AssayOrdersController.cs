@@ -133,5 +133,11 @@ namespace NorthWestOrderSystem.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult ViewOrders()
+        {
+            var assayOrders = db.AssayOrders.Include(a => a.Customer).Include(a => a.Status);
+            return View(assayOrders.ToList());
+        }
     }
 }

@@ -151,7 +151,7 @@ namespace NorthWestOrderSystem.Controllers
             //create form that calls the action methd with this information
             if (Username == "byucougar" && Password == "Gocougs")
             {
-                return View("CustLandingPage", null, db.Customers.Find(8));
+                return View("CustLandingPage", null, db.Customers.Find(31));
             }
             else
             {
@@ -165,7 +165,7 @@ namespace NorthWestOrderSystem.Controllers
         }
 
         [HttpPost]
-        public ActionResult OrderAssay(DateTime DueDate, String CompoundName, String AssayType, String Comments)
+        public ActionResult OrderAssay([Bind(Include ="DueDate, AssayTitle, Comments, CompoundName")] NewOrder neworder)
         {
             return View("ThankYou");
         }
@@ -207,7 +207,7 @@ namespace NorthWestOrderSystem.Controllers
 
         public ActionResult SingleOrder()
         {
-            return View("SingleOrder", db.AssayOrders.Find(1));
+            return View("SingleOrder", db.AssayOrders.Find(3));
         }
 
         public ActionResult SingleOrder2()

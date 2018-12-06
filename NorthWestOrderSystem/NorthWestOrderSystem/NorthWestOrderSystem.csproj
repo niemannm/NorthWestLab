@@ -177,6 +177,7 @@
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Employee_Test_Rel.cs" />
     <Compile Include="Models\Material.cs" />
+    <Compile Include="Models\NewOrder.cs" />
     <Compile Include="Models\PaymentInfo.cs" />
     <Compile Include="Models\Sample.cs" />
     <Compile Include="Models\Status.cs" />
@@ -292,6 +293,7 @@
     <Content Include="Views\Wages\Details.cshtml" />
     <Content Include="Views\Wages\Edit.cshtml" />
     <Content Include="Views\Wages\Index.cshtml" />
+    <Content Include="Views\AssayOrders\ViewOrders.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
