@@ -66,6 +66,15 @@ a:hover {
     background-size: contain;
 }
 
+.photo {
+    border: 4px solid #32daf2;
+    border-radius: 5px;
+}
+
+    .photo:hover {
+        filter: saturate(2.0);
+    }
+
 @media screen and (max-height: 450px) {
     .sidenav {
         padding-top: 15px;

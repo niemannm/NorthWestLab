@@ -7,7 +7,8 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" rel="stylesheet"/>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" rel="stylesheet"/> 
+    <link rel="icon" href="~/Content/Images/colorlogo.png">
 </head>
 <body>
     <section>
@@ -28,6 +29,7 @@
                         @Html.ActionLink("Home", "Index", "Home", null, new { @class = "navbar-item" })
                         @Html.ActionLink("About", "About", "Home", null, new { @class = "navbar-item" })
                         @Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "navbar-item" })
+                        @Html.ActionLink("Assay Catalog", "Catalog", "AssayTypes", null, new { @class = "navbar-item" })
                         @Html.ActionLink("Login", "Login", "Customers", null, new { @class = "navbar-item" })
                         @Html.ActionLink("Sign Up", "SignUp", "Customers", null, new { @class = "navbar-item" })
                     </div>
