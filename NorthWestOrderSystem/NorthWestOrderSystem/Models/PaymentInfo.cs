@@ -15,7 +15,7 @@ namespace NorthWestOrderSystem.Models
         public int PaymentInfoID { get; set; }
 
         [Display(Name = "Card Number")]
-        public int CardNumber { get; set; }
+        public string CardNumber { get; set; }
 
         [Display(Name = "Expiration Date")]
         [DataType(DataType.Date)]

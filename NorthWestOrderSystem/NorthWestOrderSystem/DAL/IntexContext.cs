@@ -15,8 +15,8 @@ namespace NorthWestOrderSystem.DAL
             //Database.Connection.ConnectionString = @"TheConnectionStringYOU ARE USING";
         }
 
-        public DbSet<Assay_Material_Rel> Assay_Material_Rels { get; set; }
-        public DbSet<Assay_Test_Rel> Assay_Test_Rels { get; set; }
+        public DbSet<TestType_Material_Rel> Assay_Material_Rels { get; set; }
+        public DbSet<AssayType_TestType_Rel> Assay_Test_Rels { get; set; }
         public DbSet<AssayOrder> AssayOrders { get; set; }
         public DbSet<AssayType> AssayTypes { get; set; }
         public DbSet<Compound> Compounds { get; set; }
