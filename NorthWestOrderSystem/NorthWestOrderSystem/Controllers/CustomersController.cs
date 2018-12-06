@@ -123,8 +123,8 @@ namespace NorthWestOrderSystem.Controllers
         {
             Customer customer = db.Customers.Find(id);
 
-            db.Database.ExecuteSqlCommand("DELETE FROM PaymentInfo WHERE PaymentInfo.PaymentInfoID = " + customer.PaymentInfoID);
-
+            //db.Database.ExecuteSqlCommand("DELETE FROM PaymentInfo WHERE PaymentInfo.PaymentInfoID = " + customer.PaymentInfoID);
+            db.Database.ExecuteSqlCommand("DELETE FROM AssayOrder WHERE AssayOrder.CustomerID = " + customer.CustomerID);
             db.Customers.Remove(customer);
             db.SaveChanges();
             return RedirectToAction("Index");
