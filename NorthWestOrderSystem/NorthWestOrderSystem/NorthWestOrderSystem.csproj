@@ -198,6 +198,7 @@
     <Content Include="Content\EmptyTestTube.svg" />
     <Content Include="Content\laboratory.jpg" />
     <Content Include="Content\logo.png" />
+    <Content Include="Content\weeklyschedule.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
