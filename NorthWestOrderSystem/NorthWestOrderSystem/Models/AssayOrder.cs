@@ -16,11 +16,11 @@ namespace NorthWestOrderSystem.Models
 
         [Display(Name = "Preliminary Charge")]
         [DataType(DataType.Currency)]
-        public float PreliminaryCharge { get; set; }
+        public int PreliminaryCharge { get; set; }
 
         [Display(Name = "Final Charge")]
         [DataType(DataType.Currency)]
-        public float? FinalCharge { get; set; }
+        public int? FinalCharge { get; set; }
 
         [Display(Name = "Due Date")]
         [DataType(DataType.Date)]
@@ -36,7 +36,7 @@ namespace NorthWestOrderSystem.Models
 
 
         [Display(Name = "Discount Percentage")]
-        public float? DiscountPercentage { get; set; }
+        public decimal? DiscountPercentage { get; set; }
 
         [Display(Name = "Comments")]
         public string Comments { get; set; }

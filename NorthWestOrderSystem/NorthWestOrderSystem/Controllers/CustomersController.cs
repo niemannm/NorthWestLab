@@ -207,7 +207,7 @@ namespace NorthWestOrderSystem.Controllers
 
         public ActionResult SingleOrder()
         {
-            return View("SingleOrder");
+            return View("SingleOrder", db.AssayOrders.Find(1));
         }
 
         public ActionResult SingleOrder2()
