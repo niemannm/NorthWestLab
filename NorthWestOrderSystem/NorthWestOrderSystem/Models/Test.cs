@@ -21,18 +21,19 @@ namespace NorthWestOrderSystem.Models
         [DataType(DataType.Date)]
         public DateTime ScheduledDate { get; set; }
 
+        [Display(Name = "Completion Date")]
+        [DataType(DataType.Date)]
+        public DateTime CompletionDate { get; set; }
+
         [Display(Name = "Concentration")]
         public string Concentration { get; set; }
-
-        [Display(Name = "Quantity")]
-        public int Quantity { get; set; }
 
         [Display(Name = "Actual Cost")]
         [DataType(DataType.Currency)]
         public double ActualCost { get; set; }
 
-        //foreign key to Assay
-        public int? AssayID { get; set; }
-        public virtual AssayType AssayType { get; set; }
+        //foreign key to TestType
+        public int? TestTypeID { get; set; }
+        public virtual TestType TestType { get; set; }
     }
 }
