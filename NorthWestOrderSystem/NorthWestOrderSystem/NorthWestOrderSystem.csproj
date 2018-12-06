@@ -196,11 +196,18 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\barCodes.png" />
+    <Content Include="Content\Images\biochemicalPharmacology.jpg" />
     <Content Include="Content\Images\Chemist.jpg" />
     <Content Include="Content\Images\chemistFade.png" />
     <Content Include="Content\Images\colorlogo.png" />
+    <Content Include="Content\Images\customScreen.jpg" />
+    <Content Include="Content\Images\discoveryScreen.jpg" />
+    <Content Include="Content\Images\immunoScreen.jpg" />
     <Content Include="Content\Images\laboratory.jpg" />
+    <Content Include="Content\Images\labStation-Other.jpg" />
     <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\pharmaScreen.jpg" />
+    <Content Include="Content\Images\profilingScreen.jpg" />
     <Content Include="Content\Images\weeklyschedule.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -302,6 +309,7 @@
     <Content Include="Views\AssayTypes\AssayTypesList.cshtml" />
     <Content Include="Views\Employees\BarCodes.cshtml" />
     <Content Include="Views\AssayTypes\Catalog.cshtml" />
+    <Content Include="Views\AssayTypes\BiochemicalPharmocology.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

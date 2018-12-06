@@ -129,5 +129,16 @@ namespace NorthWestOrderSystem.Controllers
         {
             return View("AssayTypesList");
         }
+
+        public ActionResult Catalog()
+        {
+            return View("Catalog");
+        }
+
+        public ActionResult BiochemicalPharmocology()
+        {
+            AssayType assayType = db.AssayTypes.Find(1);
+            return View(assayType);
+        }
     }
 }

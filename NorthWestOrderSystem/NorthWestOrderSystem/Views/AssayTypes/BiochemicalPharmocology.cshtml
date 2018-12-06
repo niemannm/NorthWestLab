@@ -1,0 +1,68 @@
+﻿@model NorthWestOrderSystem.Models.AssayType
+
+@{
+    ViewBag.Title = "Biochemical Pharmocology";
+}
+
+<h2>Biochemical Pharmocology</h2>
+
+<div>
+    <hr />
+    <div class="table">
+        <div class="row">
+            <div class="col-md-6">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.AssayTitle)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.AssayTitle)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.FullDescription)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.FullDescription)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Summary)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Summary)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.BasePrice)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.BasePrice)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Procedures)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Procedures)
+                    </dd>
+
+                </dl>
+            </div>
+            <div class="col-md-6">
+                <img src="~/Content/Images/biochemicalPharmacology.jpg" />
+            </div>
+        </div>
+
+    </div>
+    
+    
+</div>
+<p>
+    @Html.ActionLink("Home", "Index", "Home", null, null)
+</p>
