@@ -200,6 +200,7 @@
     <Content Include="Content\Images\Chemist.jpg" />
     <Content Include="Content\Images\chemistFade.png" />
     <Content Include="Content\Images\colorlogo.png" />
+    <Content Include="Content\Images\colorlogoN.png" />
     <Content Include="Content\Images\customScreen.jpg" />
     <Content Include="Content\Images\discoveryScreen.jpg" />
     <Content Include="Content\Images\immunoScreen.jpg" />
