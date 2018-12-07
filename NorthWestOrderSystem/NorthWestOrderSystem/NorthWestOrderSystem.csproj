@@ -203,6 +203,7 @@
     <Content Include="Content\Images\customScreen.jpg" />
     <Content Include="Content\Images\discoveryScreen.jpg" />
     <Content Include="Content\Images\immunoScreen.jpg" />
+    <Content Include="Content\Images\InvoiceExample.png" />
     <Content Include="Content\Images\laboratory.jpg" />
     <Content Include="Content\Images\labStation-Other.jpg" />
     <Content Include="Content\Images\logo.png" />
@@ -218,6 +219,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\NorthwestOrderSystem - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -311,6 +313,7 @@
     <Content Include="Views\AssayTypes\Catalog.cshtml" />
     <Content Include="Views\AssayTypes\BiochemicalPharmocology.cshtml" />
     <Content Include="Views\Home\EmailConfirmation.cshtml" />
+    <Content Include="Views\AssayOrders\Invoice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

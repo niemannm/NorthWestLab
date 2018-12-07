@@ -139,5 +139,10 @@ namespace NorthWestOrderSystem.Controllers
             var assayOrders = db.AssayOrders.Include(a => a.Customer).Include(a => a.Status);
             return View(assayOrders.ToList());
         }
+
+        public ActionResult Invoice()
+        {
+            return View("Invoice");
+        }
     }
 }
