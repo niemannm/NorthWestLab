@@ -1,4 +1,11 @@
-﻿using System.Data;
+﻿/*************
+Names: Sam Gines, Hunter Riches, Michael Niemann, Taylor Bakow
+Section: 2
+Description: MVC application that allows customers and employees to communicate more easily as 
+well as allow Seattle to communicate more easily with Sinagpore Labs. 
+It is connected to a database, which is hosted on Azure. Orders can be made and stored for easy access.
+****************/
+using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
