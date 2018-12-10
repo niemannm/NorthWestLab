@@ -78,14 +78,22 @@
                     </dd>
 
                     <dt>
-                        @Html.DisplayNameFor(model => model.Comments)
+                        <u>@Html.DisplayNameFor(model => model.Comments)</u>
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Comments)
+                        
                     </dd>
 
                 </dl>
+                <p><b>@Html.DisplayFor(model => model.Customer.FirstName):</b> When could you expect test 3 to be completed? <small><small>09-21-2018</small></small></p>
+                <p><b>Mark:</b> It is expected that test 3 we begin on September 25th. <small><small>09-22-2018</small></small></p>
+                <br />
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Reply..." class="form-control"/>
+                    </div>
+                </form>
                 <hr />
                 <dl>
                     <dt>
